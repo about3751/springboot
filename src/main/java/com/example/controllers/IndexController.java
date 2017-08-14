@@ -12,5 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "/index")
 public class IndexController {
 
+    static {
+
+    }
 
 }
