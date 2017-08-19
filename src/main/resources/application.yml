@@ -1,0 +1,4 @@
+userEntity:
+            loginName: 'admin'
+            userName: 'admin'
+            password: 'a123456'

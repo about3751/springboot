@@ -13,7 +13,6 @@ import java.util.Calendar;
  * @Author 雷超
  * @Date on 2017/8/1 0001.
  */
-@Component
 public class ScheduledTasks {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ScheduledTasks.class);

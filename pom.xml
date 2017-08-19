@@ -51,6 +51,13 @@
         </dependency>
         <!--springboot devtools 热启动依赖包 End -->
 
+        <!-- 支持 @ConfigurationProperties 注解 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
 
         <!-- JPA 和 MYSQL -->
         <dependency>

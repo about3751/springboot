@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="/common/common_css_js::cssHeader('Welcome')">
+
 </head>
 <body>
-<p th:each="personnels:${}"></p>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-right"></div>
+
+
 </body>
+<script>
+    $(function () {
+        layer.msg('qwd')
+    });
+</script>
 </html>

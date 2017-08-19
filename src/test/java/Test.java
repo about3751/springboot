@@ -1,4 +1,4 @@
-import com.example.repository.PersonnelInformationRepository;
+import com.example.repository.UserRepository;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,16 +18,11 @@ import java.util.List;
 public class Test {
 
     @Autowired
-    private PersonnelInformationRepository personnelInformationRepository;
+    private UserRepository personnelInformationRepository;
 
     @org.junit.Test
     public void test1() {
 
-        List<PersonnelInformation> personnelInformations = personnelInformationRepository.findAll();
-
-        for (PersonnelInformation personnelInformation : personnelInformations) {
-            System.out.println(personnelInformation.personnelName + " :name");
-        }
 
     }
 

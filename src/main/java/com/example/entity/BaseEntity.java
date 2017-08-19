@@ -19,11 +19,8 @@ public class BaseEntity implements Serializable {
     @GenericGenerator(name = "system-uuid", strategy = "uuid2")
     public String id;
 
-    private Date createTime;
+    @Column(name = "create_time")
+    @Temporal(value = TemporalType.TIMESTAMP)
+    public Date createTime = new Date();
 
-    @Column(name = "createAt")
-    @javax.persistence.Temporal(TemporalType.DATE)
-    public Date getCreateTime() {
-        return createTime;
-    }
 }
