@@ -20,14 +20,9 @@ public class PersonnelInfomationController {
     @Autowired
     private PersonnelInformationRepository personnelInformationRepository;
 
-    @GetMapping(value = "/lists")
-    public List<PersonnelInformation> getLists() {
-        return personnelInformationRepository.findPersonnelInformationByAgeEquals(21);
-    }
 
     @GetMapping(value = "/")
     private ModelAndView test() {
-        List<PersonnelInformation> personnelInformations = personnelInformationRepository.findAll();
         ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("personnels","personnelInformations");
         return modelAndView;
