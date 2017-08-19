@@ -1,7 +1,5 @@
 package com.example.repository;
 
-import com.example.entity.PersonnelInformation;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.RepositoryDefinition;
 
 import java.util.List;
