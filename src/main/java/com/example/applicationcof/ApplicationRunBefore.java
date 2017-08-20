@@ -1,13 +1,17 @@
 package com.example.applicationcof;
 
-import com.example.entity.UserEntity;
+import com.example.entity.NavResourceEntity;
 import com.example.repository.UserRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 
 @Component
@@ -17,7 +21,7 @@ public class ApplicationRunBefore implements CommandLineRunner {
     private static final Logger LOGGER = Logger.getLogger(ApplicationRunBefore.class.getSimpleName());
 
     @Autowired
-    private UserEntity userEntity;
+    private InitData initData;
 
     @Autowired
     private UserRepository userRepository;
@@ -25,8 +29,9 @@ public class ApplicationRunBefore implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
 
-        if (userRepository.count() <= 0) {
-            userRepository.save(userEntity);
+
+        for (NavResourceEntity navResourceEntity : initData.getNavResourceEntities()) {
+            LOGGER.info(" navResourceEntity ----------------- > " + navResourceEntity.name);
         }
 
     }

@@ -1,4 +1,15 @@
-userEntity:
-            loginName: 'admin'
-            userName: 'admin'
-            password: 'a123456'
+  initData:
+    navResourceEntities:
+          name: '首页'
+          sort: 1
+          url: ''
+          parentRes: '0000'
+          childRes: '0001'
+          level: 0
+    haha: '哈哈哈哈哈哈哈哈'
+    map:
+        name: 'keyName'
+        value: 'value'
+    maps:
+        name: 'key1'
+        value: 'value1'

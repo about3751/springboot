@@ -17,7 +17,7 @@ public class UserEntity extends BaseEntity {
     @Column(name = "login_name")
     private String loginName;
 
-    @Column(name = "user_name",length = 1)
+    @Column(name = "user_name",length = 50)
     private String userName;
 
     @Column(name = "passworld")
