@@ -5,6 +5,7 @@ import com.example.entity.NavResourceEntity;
 import com.example.repository.UserRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,7 +24,7 @@ import java.util.Map;
 public class UserController {
 
 
-    @Autowired
+    @Qualifier("userRepository")
     private UserRepository userRepository;
 
     private static List<String> maps = new ArrayList<>();
@@ -39,7 +40,7 @@ public class UserController {
     private InitData initData;
     private static final Logger LOGGER = Logger.getLogger(UserController.class.getSimpleName());
 
-    @GetMapping(value = "/")
+    @GetMapping(value = {"/", "/index"})
     public ModelAndView test() throws Exception {
         ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("datas", maps);

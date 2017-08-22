@@ -17,10 +17,38 @@ public class BaseEntity implements Serializable {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid2")
-    public String id;
+    private String id;
 
     @Column(name = "create_time")
     @Temporal(value = TemporalType.TIMESTAMP)
-    public Date createTime = new Date();
+    private Date createTime = new Date();
 
+
+    @Column(name = "sort")
+    private Integer sort;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Integer getSort() {
+        return sort;
+    }
+
+    public void setSort(Integer sort) {
+        this.sort = sort;
+    }
 }

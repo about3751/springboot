@@ -12,9 +12,11 @@ import java.util.List;
 @Table(name = "tb_role")
 public class RoleEntity extends BaseEntity {
 
+    @Column(name = "role_name")
+    public String roleName;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id")
     public List<RoleResourceEntity> roleResourceEntities;
-
 
 }
