@@ -29,10 +29,7 @@ public class ApplicationRunBefore implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
 
-
-        for (NavResourceEntity navResourceEntity : initData.getNavResourceEntities()) {
-            LOGGER.info(" navResourceEntity ----------------- > " + navResourceEntity.name);
-        }
+         System.out.println();
 
     }
 }

@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head th:include="/common/common_css_js::cssHeader('Welcome')">
-
 </head>
-<body background="/plugin/img/1.jpg">
-
-<div class="navbar navbar-default navbar-fixed-top navbar-right">
-
+<!-- 替换Content内容 -->
+<body th:replace="/common/common_css_js::content(~{::.layui-body})">
+<div class="layui-body">
+    <div class="layui-tab" lay-filter="settings" id="layui-tab-top-setting">
+        <ul class="layui-tab-title">
+            <li class="layui-this">网站设置</li>
+            <li>用户管理</li>
+            <li>权限分配</li>
+            <li>商品管理</li>
+            <li>订单管理</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">内容1</div>
+            <div class="layui-tab-item">内容2</div>
+            <div class="layui-tab-item">内容3</div>
+            <div class="layui-tab-item">内容4</div>
+            <div class="layui-tab-item">内容5</div>
+        </div>
+    </div>
 </div>
-
-<div class="container" style="margin-top: 50px;">
-
-</div>
-
-
 </body>
 <script>
+    $(function () {
+        layui.use('element', function () {
+            layui.element.on('tab('+$("#layui-tab-top-setting").attr('lay-filter')+')', function (data) {
+                console.log(data.index)
+            });
+        });
+    });
 </script>
 </html>

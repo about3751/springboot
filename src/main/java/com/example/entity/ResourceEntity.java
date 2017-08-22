@@ -1,8 +1,7 @@
 package com.example.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * @description 项目资源表
@@ -21,5 +20,7 @@ public class ResourceEntity extends BaseEntity {
     @Column(name = "desc1")
     public String desc1;
 
-
+    @OneToMany
+    @JoinColumn(name = "resource_id")
+    public List<RoleResourceEntity> roleResourceEntities;
 }

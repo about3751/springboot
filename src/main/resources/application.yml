@@ -1,15 +1,6 @@
   initData:
-    navResourceEntities:
-          name: '首页'
-          sort: 1
-          url: ''
-          parentRes: '0000'
-          childRes: '0001'
-          level: 0
+    list:
+          - '123'
     haha: '哈哈哈哈哈哈哈哈'
-    map:
-        name: 'keyName'
-        value: 'value'
-    maps:
-        name: 'key1'
-        value: 'value1'
+    navResourceEntity:
+        name: '321'

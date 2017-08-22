@@ -18,14 +18,21 @@ import java.util.Map;
 @ConfigurationProperties(prefix = "initData")
 public class InitData {
 
+    public NavResourceEntity navResourceEntity = new NavResourceEntity();
 
-    private String haha;
+    public String haha;
 
-    private Map<String,String> map = new HashMap<>();
+    public List<NavResourceEntity> navResourceEntities = new ArrayList<>();
 
-    private List<NavResourceEntity> navResourceEntities = new ArrayList<>();
+    public List<String> list = new ArrayList<>();
 
-    private List<Map<String,String>> maps = new ArrayList<>();
+    public NavResourceEntity getNavResourceEntity() {
+        return navResourceEntity;
+    }
+
+    public void setNavResourceEntity(NavResourceEntity navResourceEntity) {
+        this.navResourceEntity = navResourceEntity;
+    }
 
     public String getHaha() {
         return haha;
@@ -35,19 +42,19 @@ public class InitData {
         this.haha = haha;
     }
 
-    public Map<String, String> getMap() {
-        return map;
+    public List<String> getList() {
+        return list;
     }
 
-    public void setMap(Map<String, String> map) {
-        this.map = map;
+    public List<NavResourceEntity> getNavResourceEntities() {
+        return navResourceEntities;
     }
 
     public void setNavResourceEntities(List<NavResourceEntity> navResourceEntities) {
         this.navResourceEntities = navResourceEntities;
     }
 
-    public List<NavResourceEntity> getNavResourceEntities() {
-        return this.navResourceEntities;
+    public void setList(List<String> list) {
+        this.list = list;
     }
 }

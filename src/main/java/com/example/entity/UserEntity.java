@@ -3,9 +3,7 @@ package com.example.entity;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Component
 @Entity
@@ -17,11 +15,23 @@ public class UserEntity extends BaseEntity {
     @Column(name = "login_name")
     private String loginName;
 
-    @Column(name = "user_name",length = 50)
+    @Column(name = "user_name", length = 50)
     private String userName;
 
     @Column(name = "passworld")
     private String password;
+
+    @OneToOne
+    @JoinColumn(name = "role_id")
+    private RoleEntity role;
+
+    public RoleEntity getRole() {
+        return role;
+    }
+
+    public void setRole(RoleEntity role) {
+        this.role = role;
+    }
 
     public String getLoginName() {
         return loginName;
