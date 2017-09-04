@@ -1,5 +1,7 @@
 package com.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -9,7 +11,8 @@ import java.util.List;
  */
 @Entity
 @Table(name = "tb_resource")
-public class ResourceEntity extends BaseEntity {
+public class ResourceEntity extends BaseEntity
+{
 
     @Column(name = "child_res")
     public String childRes;
