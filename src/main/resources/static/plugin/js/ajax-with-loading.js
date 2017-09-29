@@ -13,10 +13,10 @@ zhyl.utils.ajax.This.prototype = {
             beforeSend: function () {
                 loading =
                     layer.msg(
-                        typeof data.msg == "undefined" ? "正在加载..." : data.msg, {
-                            icon: typeof data.icon == "undefined" ? 16 : data.icon,
-                            shade: typeof data.shade == "undefined" ? 0.3 : data.shade,
-                            shadeClose: typeof data.shadeClose == "undefined" ? false : data.shadeClose,
+                        typeof data.msg === "undefined" ? "正在加载..." : data.msg, {
+                            icon: typeof data.icon === "undefined" ? 16 : data.icon,
+                            shade: typeof data.shade === "undefined" ? 0.3 : data.shade,
+                            shadeClose: typeof data.shadeClose === "undefined" ? false : data.shadeClose,
                             time: 10 * 60 * 60
                         });
             },

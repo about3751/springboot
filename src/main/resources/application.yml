@@ -1,6 +1,7 @@
   initData:
     list:
           - '123'
+          - '456'
     haha: '哈哈哈哈哈哈哈哈'
     navResourceEntity:
         name: '321'

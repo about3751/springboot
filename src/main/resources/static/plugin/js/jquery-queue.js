@@ -14,7 +14,6 @@ zhyl.utils.jquery.queue.This.prototype = {
             });
         });
         $(document).dequeue(firstName);
-        console.log($.version)
     }
 };
 var Queue = new zhyl.utils.jquery.queue.This();

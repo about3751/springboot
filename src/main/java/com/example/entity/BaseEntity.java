@@ -12,7 +12,12 @@ import java.util.Date;
  * @Date on 2017/8/14 0014.
  */
 @MappedSuperclass
-public class BaseEntity implements Serializable {
+public class BaseEntity implements Serializable
+{
+
+    protected BaseEntity()
+    {
+    }
 
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -28,27 +33,33 @@ public class BaseEntity implements Serializable {
     private Integer sort;
 
 
-    public String getId() {
+    public String getId()
+    {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id)
+    {
         this.id = id;
     }
 
-    public Date getCreateTime() {
+    public Date getCreateTime()
+    {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Date createTime)
+    {
         this.createTime = createTime;
     }
 
-    public Integer getSort() {
+    public Integer getSort()
+    {
         return sort;
     }
 
-    public void setSort(Integer sort) {
+    public void setSort(Integer sort)
+    {
         this.sort = sort;
     }
 }

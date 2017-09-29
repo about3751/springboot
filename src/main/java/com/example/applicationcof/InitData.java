@@ -2,6 +2,7 @@ package com.example.applicationcof;
 
 import com.example.entity.NavResourceEntity;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -16,7 +17,8 @@ import java.util.Map;
  */
 @Component
 @ConfigurationProperties(prefix = "initData")
-public class InitData {
+public class InitData
+{
 
     public NavResourceEntity navResourceEntity = new NavResourceEntity();
 
@@ -24,37 +26,45 @@ public class InitData {
 
     public List<NavResourceEntity> navResourceEntities = new ArrayList<>();
 
-    public List<String> list = new ArrayList<>();
+    private List<String> list = new ArrayList<>();
 
-    public NavResourceEntity getNavResourceEntity() {
+    public NavResourceEntity getNavResourceEntity()
+    {
         return navResourceEntity;
     }
 
-    public void setNavResourceEntity(NavResourceEntity navResourceEntity) {
+    public void setNavResourceEntity(NavResourceEntity navResourceEntity)
+    {
         this.navResourceEntity = navResourceEntity;
     }
 
-    public String getHaha() {
+    public String getHaha()
+    {
         return haha;
     }
 
-    public void setHaha(String haha) {
+    public void setHaha(String haha)
+    {
         this.haha = haha;
     }
 
-    public List<String> getList() {
+    public List<String> getList()
+    {
         return list;
     }
 
-    public List<NavResourceEntity> getNavResourceEntities() {
+    public List<NavResourceEntity> getNavResourceEntities()
+    {
         return navResourceEntities;
     }
 
-    public void setNavResourceEntities(List<NavResourceEntity> navResourceEntities) {
+    public void setNavResourceEntities(List<NavResourceEntity> navResourceEntities)
+    {
         this.navResourceEntities = navResourceEntities;
     }
 
-    public void setList(List<String> list) {
+    public void setList(List<String> list)
+    {
         this.list = list;
     }
 }

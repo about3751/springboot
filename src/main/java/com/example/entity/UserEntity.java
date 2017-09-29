@@ -5,12 +5,17 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
-@Component
 @Entity
 @Table(name = "tb_user")
 // 使用ConfigurationProperties 需要getter setter
 @ConfigurationProperties(prefix = "userEntity")
-public class UserEntity extends BaseEntity {
+public class UserEntity extends BaseEntity
+{
+
+    protected UserEntity()
+    {
+
+    }
 
     @Column(name = "login_name")
     private String loginName;
@@ -25,35 +30,43 @@ public class UserEntity extends BaseEntity {
     @JoinColumn(name = "role_id")
     private RoleEntity role;
 
-    public RoleEntity getRole() {
+    public RoleEntity getRole()
+    {
         return role;
     }
 
-    public void setRole(RoleEntity role) {
+    public void setRole(RoleEntity role)
+    {
         this.role = role;
     }
 
-    public String getLoginName() {
+    public String getLoginName()
+    {
         return loginName;
     }
 
-    public void setLoginName(String loginName) {
+    public void setLoginName(String loginName)
+    {
         this.loginName = loginName;
     }
 
-    public String getUserName() {
+    public String getUserName()
+    {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    public void setUserName(String userName)
+    {
         this.userName = userName;
     }
 
-    public String getPassword() {
+    public String getPassword()
+    {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(String password)
+    {
         this.password = password;
     }
 }

@@ -1,0 +1,3 @@
+@SpringBootApplication 包含该了@Configuration @EnableAutoConfiguration @ComponentScan
+@ComponentScan 配置后可以扫描 @Component @Service @Repository @Controller注解的Bean
+23.9
